@@ -12,10 +12,10 @@ export class Video {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ type: "text", length: 100 })
+  @Column({ type: "text" })
   title: string;
 
-  @Column({ type: "text", length: 500 })
+  @Column({ type: "text" })
   url: string;
 
   @ManyToOne(() => Room, (room) => room.videos)

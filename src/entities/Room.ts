@@ -6,7 +6,7 @@ export class Room {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ type: "text", length: 100 })
+  @Column({ type: "text" })
   name: string;
 
   @OneToMany(() => Video, (video) => video.room)
