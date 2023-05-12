@@ -4,7 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start:dev": "nodemon --exec ts-node ./src/index.ts"
+    "start:dev": "nodemon --exec ts-node ./src/index.ts",
+    "migrate:generate": "typeorm-ts-node-commonjs -d ./src/data-source.ts migrate:generate ./src/migrations/default",
+    "migrate:run": "typeorm-ts-node-commonjs -d ./src/data-source.ts migrate:run"
   },
   "devDependencies": {
     "@types/express": "^4.17.17",
